@@ -7,5 +7,9 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@edgio/cli": "^7.11.4",
+    "@edgio/connectors": "^7.11.4",
+    "@edgio/core": "^7.11.4",
+    "@edgio/prefetch": "^7.11.4"
   }
 }
