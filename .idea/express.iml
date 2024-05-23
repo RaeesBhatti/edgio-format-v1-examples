@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.edgio" />
       <excludeFolder url="file://$MODULE_DIR$/.yalc" />
+      <excludeFolder url="file://$MODULE_DIR$/.edgio-v0" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
