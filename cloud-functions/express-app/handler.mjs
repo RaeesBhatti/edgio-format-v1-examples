@@ -20,13 +20,14 @@ export async function handleHttpInit(context) {
  * @param {Object} context - Context
  * @param {string} context.applicationPort - Value of process.env.PORT
  * @param {Promise<void>} context.initPromise - Promise returned by handleHttpInit
- * @param {URL} context.requestUrl - request URL
+ * @param {function} context.waitUntil - Wait until the promise is resolved
  * @returns {Promise<Response>} - HTTP response
  */
 export async function handleHttpRequest(request, context) {
     await context.initPromise;
+    const requestUrl = new URL(request.url);
 
-    return fetch('http://localhost:' + context.applicationPort + context.requestUrl.pathname + context.requestUrl.search, {
+    return fetch('http://localhost:' + context.applicationPort + requestUrl.pathname + requestUrl.search, {
         method: request.method,
         headers: request.headers,
         body: request.body,
