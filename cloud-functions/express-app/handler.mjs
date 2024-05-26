@@ -4,7 +4,7 @@ import * as appExports from '../../index.js';
  * Initializer for your application
  * @param {Object} context - Context
  * @param {string} context.applicationPort - Value of process.env.PORT
- * @returns {Promise<void>} -
+ * @returns {Promise<unknown>} -
  */
 export async function handleHttpInit(context) {
     return new Promise((resolve, reject) => {
@@ -19,7 +19,7 @@ export async function handleHttpInit(context) {
  * @param {Request} request - HTTP request
  * @param {Object} context - Context
  * @param {string} context.applicationPort - Value of process.env.PORT
- * @param {Promise<void>} context.initPromise - Promise returned by handleHttpInit
+ * @param {Promise<unknown>} context.initPromise - Promise returned by handleHttpInit
  * @param {function} context.waitUntil - Wait until the promise is resolved
  * @returns {Promise<Response>} - HTTP response
  */
