@@ -6,10 +6,8 @@ app.get('/', (req, res) => {
     res.send(req.headers);
 })
 
-if (!process.env.EDGIO_ENVIRONMENT_NAME) {
-    app.listen(port, () => {
-        console.log(`Example app listening at http://localhost:${port}`)
-    })
-}
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+});
 
 module.exports = {app};
