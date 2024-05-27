@@ -42,6 +42,16 @@ const config = {
         },
         {
             "if": [
+                {"==": [{"request": "path"}, "/cause-timeout-mid-streaming"]},
+                {
+                    "headers": {
+                        "set_request_headers": {"x-cloud-function": "cause-timeout-mid-streaming"}
+                    },
+                }
+            ]
+        },
+        {
+            "if": [
                 {"==": [{"request": "path"}, "/streamer"]},
                 {
                     "headers": {
