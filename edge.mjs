@@ -17,6 +17,18 @@ const config = {
                     "x-cloud-function": "express-app"
                 }
             }
+        },
+        {
+            "if": [
+                {"==": [{"request": "path"}, "/hello-world"]},
+                {
+                    "headers": {
+                        "set_request_headers": {
+                            "x-cloud-function": "hello-world"
+                        }
+                    },
+                }
+            ]
         }
     ]
 }
