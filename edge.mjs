@@ -29,6 +29,26 @@ const config = {
                     },
                 }
             ]
+        },
+        {
+            "if": [
+                {"==": [{"request": "path"}, "/cause-timeout"]},
+                {
+                    "headers": {
+                        "set_request_headers": {"x-cloud-function": "cause-timeout"}
+                    },
+                }
+            ]
+        },
+        {
+            "if": [
+                {"==": [{"request": "path"}, "/streamer"]},
+                {
+                    "headers": {
+                        "set_request_headers": {"x-cloud-function": "streamer"}
+                    },
+                }
+            ]
         }
     ]
 }
