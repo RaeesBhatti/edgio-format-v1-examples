@@ -1,3 +1,4 @@
+/** @type {import("@edgio/edgx").EdgioConfig} */
 const config = {
   localDev: {
     edgioDevServer: {
@@ -5,7 +6,7 @@ const config = {
       host: 'localhost',
     },
   },
-  cloudRuntime: "nodejs20.x",
+  cloudRuntime: 'nodejs20.x',
   origins: [],
   rules: [
     {
