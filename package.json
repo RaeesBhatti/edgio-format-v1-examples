@@ -3,6 +3,7 @@
     "edgio": "edgio"
   },
   "name": "express-test",
+  "type": "commonjs",
   "dependencies": {
     "express": "^4.18.2"
   },
